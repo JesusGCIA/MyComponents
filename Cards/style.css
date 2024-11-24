@@ -1,0 +1,199 @@
+/*Card*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+/* Eliminamos las líneas de texto no deseadas */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 2rem 0;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 5rem;
+}
+
+/* Elimina los bordes de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elimina subrayados de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina el estilo por defecto en los botones */
+button, input, select, textarea {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Evita que los campos de formulario se resalten por defecto */
+input, textarea {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* Restablece las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Evitar espaciado en tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reseteo de todos los elementos en el formulario */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset de los elementos form */
+input[type=checkbox], input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Reseteo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+/* Establece la visibilidad de los elementos */
+button, input, select, textarea {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* No mostrar marcas de superposición en elementos de formulario */
+input, textarea {
+  outline: none;
+}
+.PrimerCards{
+    padding: 2rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    
+
+  }
+  
+  .card {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*&--horizontal {
+      flex-direction: row; // Cambia la dirección de los elementos a fila
+      width: 100%; // Asegura que ocupe todo el contenedor
+  
+      .card__image {
+        width: 40%;
+        height: auto;
+        background: yellowgreen;
+      }
+  
+      .card__content {
+        width: 60%;
+        padding: 20px;
+      }
+    }*/
+  }
+  .card--vertical {
+    flex-direction: column;
+  }
+  .card--vertical .card__image {
+    min-height: 150px;
+    background: orange;
+  }
+  .card--vertical .card__content {
+    padding: 20px;
+  }
+  .card--vertical .card__text {
+    margin-bottom: 2rem;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .button {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+  }
+  .button--primary {
+    background-color: #007bff;
+    color: white;
+  }
+  .button--primary:hover {
+    background-color: #0062cc;
+  }
+  
