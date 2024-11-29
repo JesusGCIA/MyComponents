@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* Reseteo de márgenes y rellenos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Eliminamos las líneas de texto no deseadas */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 5rem;
+}
+
+/* Elimina los bordes de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elimina subrayados de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina el estilo por defecto en los botones */
+button, input, select, textarea {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Evita que los campos de formulario se resalten por defecto */
+input, textarea {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* Restablece las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Evitar espaciado en tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reseteo de todos los elementos en el formulario */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset de los elementos form */
+input[type=checkbox], input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Reseteo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+/* Establece la visibilidad de los elementos */
+button, input, select, textarea {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* No mostrar marcas de superposición en elementos de formulario */
+input, textarea {
+  outline: none;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*Menu-toggle - Icons*/
+.menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 10;
+  }
+  .menu span {
+    border-radius: 5px;
+    background: rgb(199, 198, 198);
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+  }
+  .menu .top-line {
+    animation-name: top-line-animation-close;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+  }
+  .menu .middle-line {
+    animation-name: middle-line-animation-close;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+  }
+  .menu .bottom-line {
+    animation-name: bottom-line-animation-close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .menu.open .middle-line {
+    animation-name: middle-line-animation;
+  }
+  .menu.open .bottom-line {
+    animation-name: bottom-line-animation;
+  }
+  .menu.open .top-line {
+    animation-name: top-line-animation;
+  }
+  .menu.open span {
+    background: white;
+  }
+  
+  @keyframes middle-line-animation {
+    0% {
+      /*position: absolute;*/
+    }
+    20%, 100% {
+      margin: 0 auto;
+      width: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes bottom-line-animation {
+    50%, 100% {
+      margin: 0 auto;
+      transform: translateY(-2px) rotate(45deg);
+    }
+  }
+  @keyframes top-line-animation {
+    50%, 100% {
+      margin: 0 auto;
+      transform: translateY(2px) rotate(-45deg);
+    }
+  }
+  @keyframes middle-line-animation-close {
+    0% {
+      margin: 0 auto;
+      width: 0;
+      opacity: 0;
+    }
+    20%, 100% {
+      margin: 0px auto;
+      width: 60%;
+      opacity: 1;
+    }
+  }
+  @keyframes bottom-line-animation-close {
+    0% {
+      margin: 0 auto;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100% {
+      margin: 5px auto;
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  @keyframes top-line-animation-close {
+    0% {
+      margin: 0 auto;
+      transform: translateY(2px) rotate(-45deg);
+    }
+    50%, 100% {
+      margin: 5px auto;
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  .icons-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .icons-nav .bx {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) {
+    .icons-nav {
+      margin-right: 0;
+    }
+  }
+  
+  /* Nav */
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 96%;
+    color: white;
+    height: 7.5rem;
+  }
+  .nav--content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgb(143, 9, 253);
+  }
+  .nav__container {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav__list {
+    position: fixed;
+    inset: 0;
+    background: salmon;
+    padding: 0;
+    font-size: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, visibility 0s 0.3s;
+  }
+  .nav__list.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-out, visibility 0s;
+  }
+  .nav__list a {
+    display: block;
+    padding: 1rem 4rem;
+    text-align: center;
+  }
+  .nav__user a {
+    padding: 2rem 6rem 2rem 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    min-height: 7.5rem;
+  }
+  .nav__user .bx {
+    font-size: 2.5rem;
+  }
+  .nav__logo {
+    margin: 0;
+  }
+  .nav__car {
+    font-size: 2.5rem;
+    background: rgb(132, 84, 252);
+    padding: 0.5rem 1rem;
+    border: 4px solid rgb(236, 233, 233);
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .nav__list {
+      top: 0;
+      right: inherit;
+      bottom: 0;
+      left: 0;
+      width: 30vw;
+    }
+  }
