@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  
 }
 
 /* Eliminamos las líneas de texto no deseadas */
@@ -28,24 +28,24 @@ p {
 
 h1, h2, h3, h4 {
   margin: 0 0 2rem 0;
-  font-weight: 800;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 h2 {
-  font-size: 3rem;
-}
-
-h3 {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 3rem;
+}
+
 h4 {
-  font-size: 5rem;
+  font-size: 2.5rem;
 }
 
 /* Elimina los bordes de las imágenes */
@@ -126,30 +126,45 @@ button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
 }
-
+.button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 15rem;
+  min-height: 4rem;
+}
+.button--primary {
+  background-color: #007bff;
+  color: white;
+}
+.button--primary:hover {
+  background-color: #0062cc;
+}
 /* No mostrar marcas de superposición en elementos de formulario */
 input, textarea {
   outline: none;
 }
-.PrimerCards{
+/*Empieza el codigo */
+section{
     padding: 2rem;
 }
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    
+    width: 60%;
+    margin: 0 auto;
+}
 
-  }
-  
-  .card {
-    display: flex;
+/*Card General*/
+.card {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /*&--horizontal {
+      display:flex
       flex-direction: row; // Cambia la dirección de los elementos a fila
       width: 100%; // Asegura que ocupe todo el contenedor
   
@@ -165,35 +180,87 @@ input, textarea {
       }
     }*/
   }
-  .card--vertical {
+.card--vertical {
     flex-direction: column;
-  }
-  .card--vertical .card__image {
+}
+.card--vertical .card__image {
     min-height: 150px;
     background: orange;
-  }
-  .card--vertical .card__content {
+ }
+.card--vertical .card__content {
     padding: 20px;
-  }
-  .card--vertical .card__text {
+}
+.card--vertical .card__text {
     margin-bottom: 2rem;
-  }
-  .card:hover {
+}
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  .button {
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: block;
-  }
-  .button--primary {
-    background-color: #007bff;
-    color: white;
-  }
-  .button--primary:hover {
-    background-color: #0062cc;
-  }
+}
+
+/*Card Product */
+
+.product-one {
+  font-size: 1.5rem;
   
+}
+.product-one__picture {
+  background: salmon;
+  min-height: 25rem;
+  position: relative;
+}
+.product-one__message {
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  visibility: hidden; /* Inicialmente oculto */
+  opacity: 0; /* Invisible por defecto */
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Transición suave */
+}
+.product-one__picture:hover .product-one__message {
+  visibility: visible; /* Hacer visible el mensaje */
+  opacity: 1; /* Hacerlo completamente opaco */
+  transition: opacity 0.3s ease, visibility 0s;
+}
+.product-one__text {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product-one__action {
+  min-height: 3rem;
+  border: 1px solid rgb(172, 172, 172);
+  text-align: center;
+  position: relative;
+  line-height: 3rem;
+  width: 100%;
+}
+.product-one__quantity {
+  display: block;
+}
+.product-one__button {
+  position: absolute;
+  min-width: 3rem;
+  font-size: 2rem;
+ 
+}
+.product-one__button--decrease {
+  left: 0;
+}
+.product-one__button--increase {
+  right: 0;
+  top: 0;
+}
+.product-one .button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+

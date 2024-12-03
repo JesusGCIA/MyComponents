@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="PrimerCards">
@@ -12,7 +15,7 @@
             <div class="card card--vertical">
                 <figure class="card__image"></figure>
                 <div class="card__content">
-                    <h1>Primer Card</h1>
+                    <h4>Primer Card</h4>
                     <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, soluta!</p>
                     <button class="button button--primary">Action</button>
                 </div>
@@ -20,7 +23,7 @@
             <div class="card card--vertical">
                 <figure class="card__image"></figure>
                 <div class="card__content">
-                    <h1>Primer Card</h1>
+                    <h4>Primer Card</h4>
                     <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, soluta!</p>
                     <button class="button button--primary">Action</button>
                 </div>
@@ -28,12 +31,56 @@
             <div class="card card--vertical">
                 <figure class="card__image"></figure>
                 <div class="card__content">
-                    <h1>Primer Card</h1>
+                    <h4>Primer Card</h4>
                     <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, soluta!</p>
                     <button class="button button--primary">Action</button>
                 </div>
             </div>
         </div>
     </section>
+    <section class="SecundsCards">
+        <div class="grid-container">
+            <div class="product-one">
+                <div class="product-one__picture"><div class="product-one__message">Quick view</div></div>
+                <div class="product-one__text">
+                    <p>Product</p>
+                    <p>$212.99</p>
+                </div>
+                <div class="product-one__action">
+                    <button class="product-one__button product-one__button--decrease" >-</button>
+                    <span class="product-one__quantity"  contenteditable="true">1</span>
+                    <button class="product-one__button product-one__button--increase" >+</button>
+                </div>
+                <button class="button button--primary">Add</button>
+            </div>
+            <div class="product-one">
+                <div class="product-one__picture"><div class="product-one__message">Quick view</div></div>
+                <div class="product-one__text">
+                    <p>Product</p>
+                    <p>$212.99</p>
+                </div>
+                <div class="product-one__action">
+                    <button class="product-one__button product-one__button--decrease" >-</button>
+                    <span class="product-one__quantity"  contenteditable="true">1</span>
+                    <button class="product-one__button product-one__button--increase" >+</button>
+                </div>
+                <button class="button button--primary">Add</button>
+            </div>
+            <div class="product-one">
+                <div class="product-one__picture"><div class="product-one__message">Quick view</div></div>
+                <div class="product-one__text">
+                    <p>Product</p>
+                    <p>$212.99</p>
+                </div>
+                <div class="product-one__action">
+                    <button class="product-one__button product-one__button--decrease" >-</button>
+                    <span class="product-one__quantity"  contenteditable="true">1</span>
+                    <button class="product-one__button product-one__button--increase" >+</button>
+                </div>
+                <button class="button button--primary">Add</button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
