@@ -262,5 +262,51 @@ section{
   margin-top: 1rem;
   width: 100%;
 }
-
+.article {
+  background-image: url("https://images.pexels.com/photos/1105534/pexels-photo-1105534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  color: white;
+}
+.article__content {
+  height: 100%;
+}
+.article__content h1 {
+  width: 80%;
+  font-size: 1.5rem;
+  position: absolute;
+  inset: auto auto 20px 10px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+}
+.article__content p, .article__content button {
+  position: absolute;
+  opacity: 0;
+  width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+.article__content p {
+  inset: auto auto 100px 10px;
+}
+.article__content button {
+  inset: auto auto 40px 10px;
+}
+.article:hover h1 {
+  inset: auto auto 160px 10px;
+  transition: inset 0.3s ease-out;
+}
+.article:hover p, .article:hover button {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.article:hover .article__content {
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.2);
+}
 
