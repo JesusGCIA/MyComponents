@@ -1,0 +1,392 @@
+@charset "UTF-8";
+/* Reseteo de márgenes y rellenos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Eliminamos las líneas de texto no deseadas */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 2rem 0;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+/* Elimina los bordes de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elimina subrayados de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina el estilo por defecto en los botones */
+button, input, select, textarea {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Evita que los campos de formulario se resalten por defecto */
+input, textarea {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* Restablece las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Evitar espaciado en tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reseteo de todos los elementos en el formulario */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset de los elementos form */
+input[type=checkbox], input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Reseteo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+/* Establece la visibilidad de los elementos */
+button, input, select, textarea {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* No mostrar marcas de superposición en elementos de formulario */
+input, textarea {
+  outline: none;
+}
+
+/*Button */
+.button {
+  font-size: 1.4rem;
+  min-width: 20rem;
+  height: 3.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button--primary {
+  background-color: #9A8A78;
+  color: white;
+}
+.button--primary:hover {
+  background-color: #b0a395;
+}
+.button--secundary {
+  background-color: rgb(252, 252, 252);
+  color: white;
+}
+.button--secundary:hover {
+  background-color: #e3e3e3;
+}
+/*Footerone*/
+.footerone {
+    background: rgb(20, 19, 19);
+    color: white;
+  }
+  .footerone__content {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 90%;
+    padding: 4rem 0;
+  }
+  .footerone__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+  }
+  .footerone h4 {
+    margin: 0;
+  }
+  .footerone__element {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .footerone .element--one {
+    grid-column: span 2;
+  }
+  .footerone .element--four {
+    grid-column: span 2;
+  }
+  .footerone .negrita, .footerone .button {
+    font-weight: 600;
+  }
+  .footerone__action {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footerone input {
+    border: 1px solid white;
+  }
+  .footerone .button {
+    min-width: auto;
+    background: white;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  .footerone .button, .footerone input {
+    height: 3rem;
+  }
+  .footerone .red-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    justify-content: center;
+  }
+  .footerone .copy {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid white;
+  }
+  @media (min-width: 768px) {
+    .footerone__grid {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+      grid-template-rows: initial;
+      gap: 4rem;
+    }
+    .footerone__action {
+      flex-direction: row;
+    }
+    .footerone .element--one, .footerone .element--four {
+      grid-column: initial;
+    }
+    .footerone input {
+      flex: 1.5;
+    }
+    .footerone .button {
+      flex: 1;
+    }
+    .footerone .red-icons {
+      justify-content: inherit;
+    }
+  }/*# sourceMappingURL=main.css.map */
+  /*FooterTwo*/
+.footertwo {
+  background: rgb(28, 46, 97);
+  color: white;
+}
+.footertwo__content {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footertwo .content--one {
+  padding: 4rem 0;
+}
+.footertwo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
+}
+.footertwo__element {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footertwo__flexbox {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footertwo__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footertwo .element--two {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2/3;
+}
+.footertwo .element--three {
+  grid-row: span 2;
+}
+.footertwo .element--four {
+  grid-column: span 2;
+}
+.footertwo .red-icons, .footertwo .red-block {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.footertwo .red-icons {
+  display: none;
+}
+.footertwo .negrita {
+  font-weight: 600;
+}
+.footertwo .copy {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid white;
+  font-size: 1rem;
+}
+.footertwo .map {
+  border-bottom: 1px solid white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+}
+.footertwo .number {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footertwo__action {
+  position: relative;
+  height: auto;
+}
+.footertwo .email {
+  border-bottom: 1px solid white;
+  height: 3rem;
+  width: 100%;
+  display: block;
+  padding-bottom: 1rem;
+}
+.footertwo .email::-moz-placeholder {
+  color: white;
+}
+.footertwo .email::placeholder {
+  color: white;
+}
+.footertwo .right {
+  position: absolute;
+  height: 2rem;
+  right: 0;
+  top: 0;
+  min-width: 3rem;
+}
+.footertwo .right .bx {
+  font-size: 1.8rem;
+}
+.footertwo__check {
+  display: flex;
+  gap: 0.5rem;
+}
+.footertwo__check .check {
+  border: 1px solid white;
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+}
+.footertwo__check input[type=checkbox]:checked {
+  background-color: #2acde2; /* Cambia el fondo cuan     /* Cambia el color del borde cuando está marcado */
+}
+.footertwo__check input[type=checkbox]:checked::before {
+  content: "✔"; /* Agrega un check mark */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footertwo__grid {
+    grid-template-columns: 1fr 0.5fr 1fr 2fr;
+    grid-template-rows: inherit;
+  }
+  .footertwo .element--one, .footertwo .element--two, .footertwo .element--three, .footertwo .element--four {
+    grid-column: inherit;
+    grid-row: inherit;
+  }
+  .footertwo .copy {
+    text-align: left;
+  }
+  .footertwo .red-block {
+    display: none;
+  }
+  .footertwo .red-icons {
+    display: block;
+  }
+  .footertwo__flexbox {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
